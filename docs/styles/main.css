@@ -158,9 +158,36 @@ body{
 }
 
 /* research and resources */
-.research, .resources{background:var(--card);padding:1.25rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin:2rem 0}
-.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.resource-grid article{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:8px}
+.research,
+.resources {
+  max-width: 900px;
+  margin: 2rem auto;   /* center the block horizontally */
+  text-align: center;  /* center headings and paragraphs */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.research h2,
+.resources h2 {
+  margin-bottom: 0.6rem;
+}
+
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* center the row of cards */
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.resource-grid article {
+  width: min(320px, 100%);
+  text-align: left; /* keep body text left-aligned inside each tile */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  padding: 1rem;
+  border-radius: 8px;
+}
 
 /* footer */
 .site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1.25rem 0;margin-top:2rem}
