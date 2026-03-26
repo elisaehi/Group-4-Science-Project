@@ -173,7 +173,33 @@ body{
 /* accessibility helper */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* responsiveness */
+/* cards used for processing techniques */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card{
+  background: var(--glass);
+  padding: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 22px rgba(2,6,23,0.06);
+}
+
+.card h3{margin:0 0 0.5rem;color:var(--accent)}
+.card p{margin:0 0 0.6rem;color:rgba(255,255,255,0.9)}
+.card ul{margin:0;padding-left:1.2rem;color:var(--muted)}
+
+/* lead paragraph under section title */
+.lead{
+  margin-top:0.25rem;
+  color:var(--muted);
+}
+
+/* small responsive tweak to keep spacing similar to highlights */
 @media (max-width:900px){
   .highlights{grid-template-columns:1fr; }
   .section-grid{
@@ -184,6 +210,7 @@ body{
   .nav.open{display:block}
   .nav ul{flex-direction:column;gap:0}
   #menu-toggle{display:block}
+  .cards{gap:0.75rem}
 }
 @media (max-width:640px){
   .hero h1{font-size:1.6rem}
