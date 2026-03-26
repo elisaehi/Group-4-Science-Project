@@ -2,7 +2,7 @@
   --bg:#eee4c3;
   --card:#2E7D32;
   --muted:#81C784;
-  --accent:#FF8F00;
+  --accent:#135f02;
   --accent-2:#424242;
   --wrap:1200px;
   --glass: rgba(46, 125, 50,0.03);
@@ -34,7 +34,7 @@ body{
   z-index:40;
   backdrop-filter: blur(6px);
   /* green header (uses --card variable) */
-  background: linear-gradient(180deg, rgba(46,125,50,0.98), rgba(46,125,50,0.95));
+  background: linear-gradient(rgba(46,125,50,0.95));
   border-bottom:1px solid rgba(0,0,0,0.08);
 }
 .site-header .wrap{
@@ -77,7 +77,7 @@ body{
 .hero{
   padding:6rem 0 4rem;
   /* solid green hero (uses your --card variable) */
-  background: linear-gradient(180deg, rgba(46,125,50,1), rgba(34,100,40,1));
+  background: linear-gradient(180deg, rgb(76, 153, 83), rgb(90, 210, 96));
   color:#fff;
   background-size:cover;
   background-position:center;
@@ -96,6 +96,16 @@ body{
   color: #ffffff;
   font-weight:700;
 }
+
+/* highlighted word in hero title */
+.hero h1 .accent{
+  color: rgb(37, 93, 6);               /* keeps your theme color */
+  font-family: "Playfair Display", serif; /* uses the imported font */
+  font-weight: 700;
+  font-size: 1.05em;                  /* slightly larger if desired */
+  letter-spacing: 0.2px;
+}
+
 .subtitle{
   color: rgba(255,255,255,0.92);
   font-size:1.05rem;
@@ -103,7 +113,7 @@ body{
 }
 .btn{
   display:inline-block;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  background: linear-gradient(rgb(255, 255, 255));
   color:#06110b;
   padding:0.65rem 1.1rem;
   border-radius:999px;
