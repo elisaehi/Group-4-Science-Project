@@ -129,10 +129,33 @@ body{
 .highlight h3{margin:0 0 0.5rem;color:#f4faf6}
 
 /* content sections */
-.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:center;margin:2rem 0}
+.section-grid{
+  /* center the whole section and constrain width */
+  max-width: 1100px;
+  margin: 2rem auto;         /* centers the grid in the .wrap */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
 .section-grid.reverse{direction:ltr}
-.section-grid .media img{width:100%;height:320px;object-fit:cover;border-radius:10px;display:block}
-.tech-list{margin:0;padding-left:1.2rem}
+.section-grid .media{
+  display: flex;
+  justify-content: flex-end; /* moves image to the right */
+  align-items: center;
+  padding-left: 0.5rem;      /* small space between text and image */
+}
+.section-grid .media img{
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+
+  /* drop shadow (box-shadow for layout, filter for better results with transparent images) */
+  box-shadow: 0 12px 30px rgba(3,7,8,0.45);
+  filter: drop-shadow(0 8px 18px rgba(3,7,8,0.25));
+}
 
 /* research and resources */
 .research, .resources{background:var(--card);padding:1.25rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin:2rem 0}
@@ -153,7 +176,9 @@ body{
 /* responsiveness */
 @media (max-width:900px){
   .highlights{grid-template-columns:1fr; }
-  .section-grid{grid-template-columns:1fr; }
+  .section-grid{
+    grid-template-columns: 1fr;
+  }
   .hero h1{font-size:1.75rem}
   .nav{position:absolute;top:64px;right:0;background:linear-gradient(180deg, rgba(3,7,8,0.97), rgba(3,7,8,0.98));width:100%;display:none;padding:1rem 0}
   .nav.open{display:block}
