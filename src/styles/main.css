@@ -76,22 +76,40 @@ body{
 /* hero */
 .hero{
   padding:6rem 0 4rem;
-  background-image:linear-gradient(180deg, rgba(3,7,8,0.4), rgba(3,7,8,0.6)), url('https://images.unsplash.com/photo-1506804885882-1c9a0d4dd7c2?w=2000&q=60&auto=format&fit=crop');
+  /* solid green hero (uses your --card variable) */
+  background: linear-gradient(180deg, rgba(46,125,50,1), rgba(34,100,40,1));
+  color:#fff;
   background-size:cover;
   background-position:center;
-  color:#fff;
+  text-align:center; /* center the text and button */
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
-.hero-inner{max-width:900px}
-.hero h1{font-size:2.4rem;margin:0 0 0.5rem}
-.subtitle{color:rgba(255,255,255,0.88);font-size:1.05rem;margin:0 0 1rem}
+.hero-inner{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+.hero h1{
+  font-size:2.6rem;
+  margin:0 0 0.5rem;
+  line-height:1.05;
+  color: #ffffff;
+  font-weight:700;
+}
+.subtitle{
+  color: rgba(255,255,255,0.92);
+  font-size:1.05rem;
+  margin:0 0 1rem;
+}
 .btn{
   display:inline-block;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
   color:#06110b;
-  padding:0.6rem 1rem;
+  padding:0.65rem 1.1rem;
   border-radius:999px;
   text-decoration:none;
   font-weight:700;
+  margin-top:0.5rem;
 }
 .btn.small{padding:0.45rem 0.65rem;font-size:0.9rem}
 
@@ -131,4 +149,8 @@ body{
   .nav.open{display:block}
   .nav ul{flex-direction:column;gap:0}
   #menu-toggle{display:block}
+}
+@media (max-width:640px){
+  .hero h1{font-size:1.6rem}
+  .subtitle{font-size:1rem}
 }
