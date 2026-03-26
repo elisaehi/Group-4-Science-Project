@@ -5,7 +5,7 @@
   --accent:#FF8F00;
   --accent-2:#424242;
   --wrap:1200px;
-  --glass: rgba(255,248,225,0.03);
+  --glass: rgba(46, 125, 50,0.03);
 }
 
 *{box-sizing:border-box}
