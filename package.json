@@ -1,0 +1,26 @@
+{
+  "name": "processing-preservation-web",
+  "version": "1.0.0",
+  "description": "A website addressing the importance of food processing and preservation for food security, waste reduction, safety, nutrition, and public health.",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "sh scripts/start.sh",
+    "test": "jest"
+  },
+  "keywords": [
+    "food",
+    "processing",
+    "preservation",
+    "food security",
+    "nutrition",
+    "public health"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0"
+  }
+}
